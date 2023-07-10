@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API</title>
+
+    <!-- Bootstrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- css link -->
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="bg-dark">
+    <!-- 
+      Validation required:
+      1. All fields are mandatory
+      2. Emails should be in a right format: doesn't accept if the email given doesn't end as "@gmail.com", "@yahoo.com", or any valid emails
+      3. password : atleast 8 characters or longer and must contain: 
+        no empty space,1 upperCase, 1 lowerCase, 1 character and 1 number
+      4. Confirm password : must be same as the password
+      5. An existing email from the local storage wouldn't be allowed to sign up again
+      6. the program must save the informations which are already stored to the insternal storage and the moment the website is refresh the data that was collected before should be saved and should be retrieve so that even if the website was refreshed the previous data won't be lost and the new provided data will be added to the array of the previous data from the local storage
+    -->
+    <div class="container">
+      <!-- <legend class="text-center">Javascript Form Validations and Storage</legend> -->
+
+      <form class="form-control container-fluid w-50 p-4 bg-light" id="register">
+        <legend class="fs-4 fw-bold text-center"><h1><i class="bi bi-person-circle"></i></h1></legend>
+        <div class="formField">
+          <label for="firstName" class="mt-2">First Name: <span>*</span></label>
+          <input type="text" name="firstName" class="form-control formInput" id="firstName" >
+          <small class="s1"></small>
+        </div>
+
+        <div class="formField">
+          <label for="LastName" class="mt-2">Last Name: <span>*</span></label>
+          <input type="text" name="lastName" class="form-control formInput" id="lastName" >
+          <small class="s2"></small>
+        </div>
+
+        <div class="formField">
+          <label for="email" class="mt-2">Email: <span>*</span></label>
+          <input type="text" name="email" class="form-control formInput" id="email" >
+          <small class="s3"></small>
+        </div>
+
+        <div class="formField">
+          <label for="password" class="mt-2">Password: <span>*</span></label>
+          <input type="password" name="password" class="form-control formInput" id="password" >
+          <small class="s4"></small>
+        </div>
+        
+        <div class="formField">
+          <label for="confirmPassword" class="mt-2">Confirm password: <span>*</span></label>
+          <input type="password" name="confirmPassword" class="form-control formInput" id="confirmPassword" >
+          <small class="s5"></small>
+        </div>
+
+        <div class="formField">
+          <input type="submit" value="Sign up" class="btn btn-primary form-control mt-3" id="submit">
+        </div>
+      </form>
+    </div>
+    <!-- JS link -->
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  </body>
+</html>
